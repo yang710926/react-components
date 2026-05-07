@@ -1,0 +1,27 @@
+$h: 22px;
+$h2: $h - 4px;
+.wa-switch {
+  height: $h;
+  width: $h * 2;
+  border: none;
+  background: #dcdfe6;
+  border-radius: 11px;
+  position: relative;
+  cursor: pointer;
+}
+.wa-span{
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: $h2;
+  width: $h2;
+  background: #ffffff;
+  border-radius: 11px;
+  transition: left 250ms;
+}
+.wa-switch.wa-checked {
+  background: #409eff;
+}
+.wa-switch.wa-checked > .wa-span {
+  left: calc(100% - #{$h2} - 2px); 
+}

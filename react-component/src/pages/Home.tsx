@@ -1,6 +1,6 @@
 import Top from '../components/top';
 import '../css/home.scss';
-
+import { useNavigate } from 'react-router-dom';
 const features = [
   {
     title: '开箱即用',
@@ -16,7 +16,19 @@ const features = [
   }
 ];
 
+
+const toaddress = () => {
+  window.open('https://gitee.com/yang710926/react---component-library/tree/master/react-component');
+}
+
+
+
 const Home = () => {
+  const navigate = useNavigate();
+  const todoc = () => {
+
+    navigate('/Docs');
+  }
   return (
     <div>
       <Top />
@@ -24,8 +36,8 @@ const Home = () => {
         <h1>瓦UI</h1>
         <h2 style={{ marginTop: '15px' }}>基于react.js的UI框架</h2>
         <div className="btns">
-          <div className="address">gitee</div>
-          <div className="go">开始</div>
+          <div className="address" onClick={toaddress}>gitee</div>
+          <div className="go" onClick={todoc}>开始</div>
         </div>
       </div>
 

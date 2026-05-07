@@ -1,26 +1,31 @@
-import { useParams, Link } from 'react-router-dom';
-
+import Top from '../components/top';
+import '../css/doc.scss';
+import { Link, Outlet } from 'react-router-dom';
 const Docs = () => {
-  const { id } = useParams();
 
   return (
-    <div>
-      <h1>文档中心</h1>
-      {id ? (
-        <p>当前查看文档 ID: {id}</p>
-      ) : (
-        <div>
-          <p>请选择一个文档</p>
-          <ul>
-            <li><Link to="/docs/1">文档 1</Link></li>
-            <li><Link to="/docs/2">文档 2</Link></li>
-            <li><Link to="/docs/3">文档 3</Link></li>
-          </ul>
-        </div>
-      )}
-      <div style={{ marginTop: '20px' }}>
-        <Link to="/">返回首页</Link>
+    <div >
+      <Top />
+      <div className="docs-content">
+        <aside>
+          {/* 目录导航区域 */}
+          <h1>文档</h1>
+          <ol>
+            <li> <Link to="./Intro"> 介绍</Link></li>
+          </ol>
+
+          <h1>组件列表</h1>
+          <ol>
+            <li> <Link to="./Switch"> switch</Link></li>
+          </ol>
+
+        </aside>
+        <main>
+          {/* 文档内容将放在这里 */}
+          <Outlet />
+        </main>
       </div>
+
     </div>
   );
 };
