@@ -25,3 +25,7 @@ $h2: $h - 4px;
 .wa-switch.wa-checked > .wa-span {
   left: calc(100% - #{$h2} - 2px); 
 }
+.wa-switch[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
