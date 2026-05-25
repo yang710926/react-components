@@ -4,6 +4,7 @@ const Home = lazy(() => import('../pages/Home'));
 const Docs = lazy(() => import('../pages/Docs'));
 const Intro = lazy(() => import('../components/Intro'));
 const Switch = lazy(() => import('../components/Switch'));
+const Button = lazy(() => import('../components/Button'));
 // 路由配置数组
 export const routes = [
   {
@@ -29,6 +30,12 @@ export const routes = [
         element: <Switch />,
         name: 'Switch组件',
         title: 'Switch组件'
+      },
+       {
+        path: 'Button',
+        element: <Button />,
+        name: 'Button组件',
+        title: 'Button组件'
       },
     ]
   },

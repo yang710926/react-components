@@ -1,10 +1,10 @@
 import Switch from "../lib/switch";
 import { useState } from 'react';
 const SwitchDemo = () => {
-    const onChange = (bool) => {
+    const onChange = (bool: boolean) => {
         setBool(bool)
     }
-    const [bool, setBool] = useState(false);
+    const [bool, setBool] = useState<boolean>(false);
     return (
         <div>
             <Switch bool={bool} onChange={onChange} />

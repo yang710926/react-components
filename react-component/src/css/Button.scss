@@ -6,7 +6,7 @@ $radius: 4px;
 $red: red;
 $grey: grey;
 
-.harden-button {
+.wa-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -41,7 +41,7 @@ $grey: grey;
   }
   
   // 链接主题
-  &.harden-theme-link {
+  &.wa-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -53,7 +53,7 @@ $grey: grey;
   }
   
   // 文本主题
-  &.harden-theme-text {
+  &.wa-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -65,22 +65,22 @@ $grey: grey;
   }
   
   // 大尺寸
-  &.harden-size-big {
+  &.wa-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
   
   // 小尺寸
-  &.harden-size-small {
+  &.wa-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
   
   // 按钮主题的主要/危险等级
-  &.harden-theme-button {
-    &.harden-level-main {
+  &.wa-theme-button {
+    &.wa-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -92,7 +92,7 @@ $grey: grey;
       }
     }
     
-    &.harden-level-danger {
+    &.wa-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -106,8 +106,8 @@ $grey: grey;
   }
   
   // 链接主题的危险等级
-  &.harden-theme-link {
-    &.harden-level-danger {
+  &.wa-theme-link {
+    &.wa-level-danger {
       color: $red;
       
       &:hover,
@@ -118,8 +118,8 @@ $grey: grey;
   }
   
   // 文本主题的主要/危险等级
-  &.harden-theme-text {
-    &.harden-level-main {
+  &.wa-theme-text {
+    &.wa-level-main {
       color: $blue;
       
       &:hover,
@@ -128,7 +128,7 @@ $grey: grey;
       }
     }
     
-    &.harden-level-danger {
+    &.wa-level-danger {
       color: $red;
       
       &:hover,
@@ -139,7 +139,7 @@ $grey: grey;
   }
   
   // 按钮主题禁用样式
-  &.harden-theme-button {
+  &.wa-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -151,8 +151,8 @@ $grey: grey;
   }
   
   // 链接和文本主题禁用样式
-  &.harden-theme-link,
-  &.harden-theme-text {
+  &.wa-theme-link,
+  &.wa-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -160,7 +160,7 @@ $grey: grey;
   }
   
   // 加载指示器
-  > .harden-loadingIndicator {
+  > .wa-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -169,11 +169,11 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: harden-spin 1s infinite linear;
+    animation: wa-spin 1s infinite linear;
   }
 }
 
-@keyframes harden-spin {
+@keyframes wa-spin {
   0% {
     transform: rotate(0deg);
   }

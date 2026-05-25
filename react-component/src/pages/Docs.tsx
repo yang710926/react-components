@@ -17,6 +17,7 @@ const Docs = () => {
           <h1>组件列表</h1>
           <ol>
             <li> <Link to="./Switch"> switch</Link></li>
+            <li> <Link to="./Button"> Button</Link></li>
           </ol>
 
         </aside>

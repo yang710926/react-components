@@ -28,11 +28,11 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
     // 计算样式类名
     const classes = classNames(
-        'harden-button',
+        'wa-button',
         {
-            [`harden-theme-${theme}`]: theme,
-            [`harden-size-${size}`]: size,
-            [`harden-level-${level}`]: level,
+            [`wa-theme-${theme}`]: theme,
+            [`wa-size-${size}`]: size,
+            [`wa-level-${level}`]: level,
         },
         className
     );
@@ -51,7 +51,7 @@ const Button: React.FC<ButtonProps> = ({
             onClick={handleClick}
             {...restProps}
         >
-            {loading && <span className="harden-loadingIndicator" />}
+            {loading && <span className="wa-loadingIndicator" />}
             {children}
         </button>
     );
