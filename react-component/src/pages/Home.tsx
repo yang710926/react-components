@@ -18,7 +18,7 @@ const features = [
 
 
 const toaddress = () => {
-  window.open('https://gitee.com/yang710926/react---component-library/tree/master/react-component');
+  window.open('https://github.com/yang710926/react-components/tree/main/react-component');
 }
 
 
@@ -35,7 +35,7 @@ const Home = () => {
         <h1>瓦UI</h1>
         <h2 style={{ marginTop: '15px' }}>基于react.js的UI框架</h2>
         <div className="btns">
-          <div className="address" onClick={toaddress}>gitee</div>
+          <div className="address" onClick={toaddress}>github</div>
           <div className="go" onClick={todoc}>开始</div>
         </div>
       </div>
