@@ -30,6 +30,9 @@ const wrapSuspense = (routeList: any) => {
   }));
 };
 
-const router = createBrowserRouter(wrapSuspense(routes));
+// basename 匹配 vite.config 中的 base，dev 为 '/'，生产为 '/react-components/'
+const router = createBrowserRouter(wrapSuspense(routes), {
+  basename: import.meta.env.BASE_URL,
+});
 
 export { router };
