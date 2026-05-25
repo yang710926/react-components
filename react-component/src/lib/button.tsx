@@ -1,4 +1,5 @@
-import React, { ReactNode, MouseEvent } from 'react';
+import React from 'react';
+import type { ReactNode, MouseEvent } from 'react';
 import classNames from 'classnames';
 import '../css/Button.scss';
 
@@ -38,9 +39,9 @@ const Button: React.FC<ButtonProps> = ({
     );
 
     // 处理点击事件（禁用或加载中时不可点击）
-    const handleClick = (e) => {
+    const handleClick = (e: React.MouseEvent) => {
         if (disabled || loading) return;
-        onClick?.(e);
+        (onClick as ((e: React.MouseEvent) => void) | undefined)?.(e);
     };
 
     return (

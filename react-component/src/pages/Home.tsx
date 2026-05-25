@@ -26,7 +26,6 @@ const toaddress = () => {
 const Home = () => {
   const navigate = useNavigate();
   const todoc = () => {
-
     navigate('/Docs');
   }
   return (

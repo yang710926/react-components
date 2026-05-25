@@ -1,18 +1,25 @@
 import '../css/switch.scss';
 import classNames from 'classnames';
 
-const Switch = ({ bool, onChange, disabled = false }) => {
-    console.log("Switch 收到的 disabled：", disabled);
+interface SwitchProps {
+    bool: boolean;
+    onChange: (checked: boolean) => void;
+    disabled?: boolean;
+}
+
+const Switch = ({ bool, onChange, disabled = false }: SwitchProps) => {
+    const handleClick = () => {
+        onChange(!bool);
+    };
+
     return (
         <div>
-            <button 
+            <button
                 className={classNames('wa-switch', { 'wa-checked': bool })}
-                onClick={() => {
-                    // 关键：disabled 为 true 时直接 return，不执行切换
-                    if (disabled) return;
-                    onChange(!bool);
-                }}
+                onClick={handleClick}
                 disabled={disabled}
+                role="switch"
+                aria-checked={bool}
             >
                 <span className="wa-span"></span>
             </button>

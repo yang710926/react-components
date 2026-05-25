@@ -20,6 +20,12 @@ export const routes = [
     title: '文档页',
     children: [
       {
+        index: true,
+        element: <Intro />,
+        name: '介绍页',
+        title: '介绍页'
+      },
+      {
         path: 'Intro',
         element: <Intro />,
         name: '介绍页',

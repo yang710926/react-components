@@ -17,16 +17,19 @@ const Loading = () => (
   </div>
 );
 
-// 创建路由配置（带懒加载包装）
-const router = createBrowserRouter(
-  routes.map(route => ({
+// 递归为所有路由（含子路由）包裹 Suspense
+const wrapSuspense = (routeList: any) => {
+  return routeList.map((route: any) => ({
     ...route,
     element: (
       <Suspense fallback={<Loading />}>
         {route.element}
       </Suspense>
-    )
-  }))
-);
+    ),
+    ...(route.children ? { children: wrapSuspense(route.children) } : {})
+  }));
+};
+
+const router = createBrowserRouter(wrapSuspense(routes));
 
 export { router };
