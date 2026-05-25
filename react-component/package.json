@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://2584888303.github.io/react-component",
+  "homepage": "https://yang710926.github.io/react-components",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
